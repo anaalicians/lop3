@@ -1,0 +1,38 @@
+/*
+
+ETAPA 3 - JOGO
+
+Ana Alícia Nascimento dos Santos - subturma C
+
+Beatriz Soares de Paiva - subturma B
+
+*/
+
+var x = 100;
+var y = 100;
+var yo = 0;
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(300,400,90);
+  ellipse(x, y, 50,50);
+  if(keyIsDown(RIGHT_ARROW)){
+    x = x + 5;
+  
+}
+  if(keyIsDown(LEFT_ARROW)){
+    x = x - 5;
+  }
+  if (keyIsDown(UP_ARROW)){
+  y = y - 5;
+  }
+  if(keyIsDown(DOWN_ARROW)){
+    y = y + 5; 
+}
+  ellipse(yo, 200,20,20)
+yo = yo + 2;
+  if (yo > 400){
+    yo = random(-400, - 40)
+}
