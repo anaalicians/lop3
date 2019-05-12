@@ -1,0 +1,31 @@
+var x = 100
+var y = 300
+var xd = 0
+var xd = 0
+
+var estadoDisparo = false;
+
+function setup(){
+createCanvas(500, 400);
+}
+function draw(){
+background(300,400,90)
+
+ellipse(x, y, 40, 40)
+x= x+3;
+ if(x> width) 
+x=0
+ if(keyIsDown(ENTER) && estadoDisparo == false){
+xd = x;
+yd = y;
+estadoDisparo = true
+}
+ if(estadoDisparo == true){
+ellipse(xd, yd, 4, 4);
+yd = yd - 7;
+   if (yd < 0){
+estadoDisparo = false
+
+}
+
+}}
